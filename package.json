@@ -9,6 +9,7 @@
   "author": "Shibata Mamoru",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "mqtt": "^2.18.8",
     "ps4-waker": "^1.6.0"
   }
