@@ -57,7 +57,7 @@ client.on('message', function (topic, message) {
         homebridge.turnOnHeater()
           .catch((e) => console.log(e))
       } else if (/消し|けし|オフ/.test(phrase)) {
-        homebridge.turnOffAc()
+        homebridge.turnOffHeater()
           .catch((e) => console.log(e))
       }
 
