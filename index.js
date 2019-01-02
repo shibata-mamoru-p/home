@@ -7,7 +7,7 @@ const Homebridge = require('./lib/homebridge')
 const CHANNEL_TOKEN = process.env.BEEBOTTE_CHANNEL_TOKEN_HOME
 
 const client = mqtt.connect('mqtt://mqtt.beebotte.com',
-  {username: `token:${CHANNEL_TOKEN}`, password: ''}
+  { username: `token:${CHANNEL_TOKEN}`, password: '' }
 )
 
 const homebridge = new Homebridge()
