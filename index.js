@@ -49,6 +49,8 @@ client.on('message', function (topic, message) {
       } else if (/消し|けし|オフ/.test(phrase)) {
         homebridge.turnOffAc()
           .catch((e) => console.log(e))
+      } else if (/\d{1,2}/.test(phrase)) {
+        homebridge.setAcTemperature(phrase.match(/\d{1,2}/)[0])
       }
 
       break
@@ -59,6 +61,8 @@ client.on('message', function (topic, message) {
       } else if (/消し|けし|オフ/.test(phrase)) {
         homebridge.turnOffHeater()
           .catch((e) => console.log(e))
+      } else if (/\d{1,2}/.test(phrase)) {
+        homebridge.setHeaterTemperature(phrase.match(/\d{1,2}/)[0])
       }
 
       break
